@@ -11,6 +11,7 @@ class CartolaScrapper
 
   AGENT = Mechanize.new
   AGENT.user_agent_alias = 'Mac Safari'
+  #AGENT.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
   def self.get_info
     info = JSON.parse(AGENT.get(BASE_URI).body)
