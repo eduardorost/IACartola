@@ -20,7 +20,7 @@ for rodada in rodadas:
     for jogador in rodada:
         posicao = str(jogador['posicao']['abreviacao'])
         posicoesTotal[posicao] = posicoesTotal.get(posicao, 0) + float(jogador['pontos'])
-        if float(jogador['pontos']) > 0:
+        if float(jogador['pontos']) != 0:
             posicoesQtd[posicao] = posicoesQtd.get(posicao, 0) + 1 
 
 for key, value in posicoesTotal.iteritems():
